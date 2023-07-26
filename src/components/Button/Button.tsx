@@ -1,11 +1,29 @@
 import React from "react";
 
-interface ButtonProps {
-  label: string;
-}
+import { ButtonProps } from "./Button.types";
+import { StyledButton } from "./styled-components";
 
-const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+const Button: React.FC<ButtonProps> = ({
+  variant = "solid",
+  size = "medium",
+  color = "primary",
+  disabled = false,
+  label = "",
+  onClick,
+  ...props
+}) => {
+  return (
+    <StyledButton
+      type="button"
+      onClick={onClick}
+      variant={variant}
+      size={size}
+      color={color}
+      disabled={disabled}
+    >
+      {label}
+    </StyledButton>
+  );
 };
 
 export default Button;
