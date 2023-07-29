@@ -8,6 +8,7 @@ const Button: React.FC<ButtonProps> = ({
   size = "medium",
   color = "primary",
   disabled = false,
+  disableShadow = false,
   label = "",
   onClick,
   ...props
@@ -20,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({
       size={size}
       color={color}
       disabled={disabled}
+      disableShadow={disableShadow}
     >
       {label}
     </StyledButton>
