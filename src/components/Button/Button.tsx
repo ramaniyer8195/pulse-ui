@@ -3,6 +3,7 @@ import React from "react";
 import { ButtonProps } from "./Button.types";
 import { StyledButton } from "./styled-components";
 
+// TODO: Handle icon button and start and end icons
 const Button: React.FC<ButtonProps> = ({
   variant = "solid",
   size = "medium",
