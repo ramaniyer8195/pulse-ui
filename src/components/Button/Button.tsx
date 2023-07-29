@@ -1,11 +1,32 @@
 import React from "react";
 
-interface ButtonProps {
-  label: string;
-}
+import { ButtonProps } from "./Button.types";
+import { StyledButton } from "./styled-components";
 
-const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
+// TODO: Handle icon button and start and end icons
+const Button: React.FC<ButtonProps> = ({
+  variant = "solid",
+  size = "medium",
+  color = "primary",
+  disabled = false,
+  disableShadow = false,
+  label = "",
+  onClick,
+  ...props
+}) => {
+  return (
+    <StyledButton
+      type="button"
+      onClick={onClick}
+      variant={variant}
+      size={size}
+      color={color}
+      disabled={disabled}
+      disableShadow={disableShadow}
+    >
+      {label}
+    </StyledButton>
+  );
 };
 
 export default Button;
