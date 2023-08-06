@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, CSSProperties } from "react";
 
 export interface ButtonProps {
   variant?: "solid" | "outline" | "text";
@@ -6,6 +6,6 @@ export interface ButtonProps {
   color?: "primary" | "secondary" | "error" | "warning" | "info" | "success";
   disabled?: boolean;
   disableShadow?: boolean;
-  label?: string;
+  ext?: CSSProperties;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }

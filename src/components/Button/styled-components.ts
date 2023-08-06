@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { ButtonProps } from "./Button.types";
-import { blue, green, lightBlue, orange, palette, purple, red } from "../Color";
+import { blue, green, lightBlue, orange, purple, red } from "../Color";
 
 const colorValues = {
   primary: {

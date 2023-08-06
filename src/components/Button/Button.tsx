@@ -1,19 +1,19 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 import { ButtonProps } from "./Button.types";
 import { StyledButton } from "./styled-components";
 
 // TODO: Handle icon button and start and end icons
-const Button: React.FC<ButtonProps> = ({
+const Button: React.FC = ({
   variant = "solid",
   size = "medium",
   color = "primary",
   disabled = false,
   disableShadow = false,
-  label = "",
-  onClick,
+  onClick = () => {},
+  ext = {},
   ...props
-}) => {
+}: PropsWithChildren<ButtonProps>) => {
   return (
     <StyledButton
       type="button"
@@ -23,8 +23,9 @@ const Button: React.FC<ButtonProps> = ({
       color={color}
       disabled={disabled}
       disableShadow={disableShadow}
+      style={ext}
     >
-      {label}
+      {props.children}
     </StyledButton>
   );
 };

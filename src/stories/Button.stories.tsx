@@ -1,4 +1,3 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Button from "../components/Button/Button";
@@ -13,7 +12,10 @@ type Story = StoryObj<typeof Button>;
 export const ButtonPlayground: Story = {
   args: {
     variant: "solid",
-    size: "small",
-    label: "Button",
+    size: "medium",
+    color: "primary",
+    disabled: false,
+    disableShadow: false,
+    onClick: () => {},
   },
 };
