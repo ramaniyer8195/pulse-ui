@@ -1,10 +1,10 @@
-import React, { PropsWithChildren } from "react";
+import React from "react";
 
 import { ButtonProps } from "./Button.types";
 import { StyledButton } from "./styled-components";
 
 // TODO: Handle icon button and start and end icons
-const Button: React.FC = ({
+const Button: React.FC<ButtonProps> = ({
   variant = "solid",
   size = "medium",
   color = "primary",
@@ -13,7 +13,7 @@ const Button: React.FC = ({
   onClick = () => {},
   ext = {},
   ...props
-}: PropsWithChildren<ButtonProps>) => {
+}) => {
   return (
     <StyledButton
       type="button"
